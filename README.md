@@ -1,5 +1,5 @@
 This program is intended to run only on payer's (community administrator's) PC as it has no security at all. It does not work on Windows XP!
-After start the program will open in in your browser. Linux users should install sqlite3.
+After start the program will open in your browser. Linux users should install sqlite3.
 
 To compile you need Rust with cargo. I recommend https://rustup.rs
 
