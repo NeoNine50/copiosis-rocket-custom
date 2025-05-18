@@ -1,0 +1,32 @@
+[package]
+name = "crc"
+version = "0.2.3"
+edition = "2021"
+
+[features]
+default = ["gui"]
+gui = ["webbrowser"]
+
+[dependencies]
+rocket = "0.5.1"
+pest = "=2.8.0"
+webbrowser = { version = "1.0.4", optional = true }
+rusqlite = { version = "0.29.0", features = ["bundled"] }
+
+[dependencies.rocket_dyn_templates]
+version = "0.2.0"
+default-features = false
+features = ["handlebars"]
+
+[dependencies.rocket_sync_db_pools]
+version = "0.1.0"
+default-features = false
+features = ["sqlite_pool"]
+
+[package.metadata.android]
+build_targets = [ "armv7-linux-androideabi" ]
+android_version = 18
+target_sdk_version = 18
+min_sdk_version = 18
+opengles_version_major = 1
+opengles_version_minor = 1
