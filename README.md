@@ -15,9 +15,13 @@ Also on Debian (and possibly others) do:
     sudo apt-get install mingw-w64-i686-dev gcc-mingw-w64-i686
     sudo ln -s /usr/i686-w64-mingw32/lib/libadvapi32.a /usr/i686-w64-mingw32/lib/libAdvapi32.a
 
-and create **.cargo/config** with rustflags only for i686
+and create an empty document and give it the name config.toml in .cargo in your /home directory with rustflags only for i686:
 
     [target.i686-pc-windows-gnu]
     linker = "i686-w64-mingw32-gcc"
     rustflags = "-C panic=abort"
+
+to build the Windows version, run:
+
+    cargo build --target i686-pc-windows-gnu -v
 
