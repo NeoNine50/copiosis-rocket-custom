@@ -138,7 +138,7 @@ pub async fn addproduct(product: Form<User>, db_conn: &State<DbConn>, templatedi
                             &0, &0, &0, &0])
             .expect("insert single entry into products table");
         Flash::success(Redirect::to("/"),
-                       if templatedir.0 { "Produkt byl přidán do seznamu položek." } else { "Product added to products list." })
+                       if templatedir.0 { "Produkt přidán do seznamu produktů." } else { "Product added to products list." })
     }
     else {
         tmpconn.execute("UPDATE products SET name = $1, gateway = $2, benefit = $3,
