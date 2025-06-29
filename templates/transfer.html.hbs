@@ -66,17 +66,16 @@
         </tr>
         <tr>
             <td>
-                <label for="comment">Comment:</label>
+                <label for="comment">Notes:</label>
             </td>
             <td>
-                <input type="text" name="comment" id="comment" />
+                <textarea name="comment" id="comment" rows="3" style="width:100%;" oninput="autoExpand(this)"></textarea>
             </td>
         </tr>
         <tr>
+            <td></td>
             <td>
-            </td>
-            <td>
-                <input type="submit" value="Create transaction"/>
+                <input type="submit" value="Submit"/>
             </td>
         </tr>
     </table>
